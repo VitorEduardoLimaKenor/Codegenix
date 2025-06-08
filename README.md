@@ -12,28 +12,7 @@
 
 ## 🗂️ Estrutura do Projeto
 
-codegenix/
-│
-├── main.py # Ponto de entrada principal
-|
-├── model/
-│ └── populacao.py # Classe que gerencia a população de algoritmos
-│
-├── controller/
-│ ├── operador_genetico.py # Operações genéticas: seleção, cruzamento e mutação
-│ └── avaliador_service.py # Avaliação dos algoritmos via LLM
-│
-|── utils/
-| └── 
-|
-├── view/
-│ └── 
-│
-|── .env # Variáveis de ambiente
-|
-│── requirements.txt # Requisitos do projeto
-│
-└── README.md # Este arquivo
+<pre lang="markdown"> ``` codegenix/ │ ├── main.py # Ponto de entrada principal │ ├── model/ │ └── populacao.py # Classe que gerencia a população de algoritmos │ ├── controller/ │ ├── operador_genetico.py # Operações genéticas: seleção, cruzamento e mutação │ └── avaliador_service.py # Avaliação dos algoritmos via LLM │ ├── utils/ │ └── # Utilitários (adicionar descrição ou arquivos) │ ├── view/ │ └── # Interface ou apresentação (adicionar descrição ou arquivos) │ ├── .env # Variáveis de ambiente │ ├── requirements.txt # Requisitos do projeto │ └── README.md # Este arquivo ``` </pre>
 
 ---
 
