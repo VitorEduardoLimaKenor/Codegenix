@@ -8,11 +8,18 @@ class OperadorGenetico:
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
     def selecionar(self, algoritmos, quantidade=5):
+        print(f"[DEBUG] Selecionando entre {len(algoritmos)} algoritmos...")
         # Filtra algoritmos com fitness positivo
         algoritmos_validos = [a for a in algoritmos if a.fitness is not None and a.fitness > 0]
+        print(f"[DEBUG] Encontrados {len(algoritmos_validos)} algoritmos válidos")
 
         if not algoritmos_validos:
-            raise ValueError("Nenhum algoritmo válido com fitness positivo encontrado.")
+            # Se não houver algoritmos válidos, retorna os algoritmos originais
+            print("[DEBUG] Nenhum algoritmo válido encontrado, usando todos os algoritmos")
+            return algoritmos[:quantidade]
+
+        # Ordena por fitness
+        algoritmos_validos.sort(key=lambda x: x.fitness, reverse=True)
 
         # Ajusta quantidade para não exceder o número de válidos
         quantidade = min(quantidade, len(algoritmos_validos))
