@@ -1,0 +1,42 @@
+[
+  {
+    "geracao": 0,
+    "fitness": 60,
+    "metricas": {
+      "eficiencia": 40.0,
+      "clareza": 80.0,
+      "boas_praticas": 60.0
+    },
+    "timestamp": "2025-06-13T14:20:22.350204"
+  },
+  {
+    "geracao": 0,
+    "fitness": 43,
+    "metricas": {
+      "eficiencia": 40.0,
+      "clareza": 60.0,
+      "boas_praticas": 30.0
+    },
+    "timestamp": "2025-06-13T14:20:22.745866"
+  },
+  {
+    "geracao": 0,
+    "fitness": 40,
+    "metricas": {
+      "eficiencia": 40.0,
+      "clareza": 60.0,
+      "boas_praticas": 20.0
+    },
+    "timestamp": "2025-06-13T14:20:23.137360"
+  },
+  {
+    "geracao": 1,
+    "fitness": 80,
+    "metricas": {
+      "eficiencia": 80.0,
+      "clareza": 90.0,
+      "boas_praticas": 70.0
+    },
+    "timestamp": "2025-06-13T14:20:24.406537"
+  }
+]

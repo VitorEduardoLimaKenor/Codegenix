@@ -1,0 +1,6 @@
+# Backup do melhor algoritmo - Fitness: 80
+```python
+def maior_valor(lista):
+    """Encontra o maior valor em uma lista."""
+    return max(lista) if lista else None
+```
