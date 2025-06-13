@@ -15,6 +15,9 @@ class Populacao:
         if tamanho is not None:
             self.tamanho = tamanho
 
+        # Atualiza a geração atual no avaliador (geração inicial = 0)
+        self.avaliador.set_geracao(self.geracao)
+
         variacoes = self.operador.gerar_variacoes_iniciais(
             codigo_base=codigo_base,
             linguagem=self.linguagem,
@@ -22,15 +25,18 @@ class Populacao:
         )
         self.algoritmos = variacoes
 
-        # Avalia cada algoritmo já na geração inicial
+        # Avalia cada algoritmo da geração inicial
         for algoritmo in self.algoritmos:
             self.avaliador.avaliar(algoritmo)
+            
+        # Salva o histórico da geração inicial
+        self.avaliador.salvar_historico()
 
     def evoluir(self, num_geracoes: int = 5):
         for _ in range(num_geracoes):
-            # Avalia todos os algoritmos da geração atual
-            for alg in self.algoritmos:
-                self.avaliador.avaliar(alg)
+            # Incrementa a geração antes de começar
+            self.geracao += 1
+            self.avaliador.set_geracao(self.geracao)
 
             # Seleciona os melhores para cruzar
             selecionados = self.operador.selecionar(self.algoritmos, quantidade=self.tamanho)
@@ -44,7 +50,9 @@ class Populacao:
                     nova_geracao.append(filho)
 
             self.algoritmos = nova_geracao
-            self.geracao += 1
+
+            # Salva o histórico da geração atual
+            self.avaliador.salvar_historico()
 
     def melhor_individuo(self):
         """Retorna o melhor indivíduo da população atual."""
