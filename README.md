@@ -4,6 +4,14 @@
 
 O CodeGenix é um simulador de evolução de códigos baseado em algoritmos genéticos. Ele permite que usuários submetam algoritmos para otimização automática através de princípios de evolução genética (seleção, mutação e cruzamento). A aplicação utiliza a API da Groq para avaliar e gerar variações de código.
 
+## Integrantes do grupo
+
+- Pedro Chastalo
+- Vitor Eduardo
+- Mayara Rodruigues
+- Winicius dos passos
+- Marcus Nunes
+
 ## Arquitetura MVC e Princípios SOLID
 
 O projeto foi estruturado seguindo o padrão de arquitetura MVC (Model-View-Controller) e os princípios SOLID de design de software, proporcionando uma base sólida para manutenção e extensão.
