@@ -7,7 +7,7 @@ with open('historico_avaliacoes.json', 'r', encoding='utf-8') as arquivo:
     historico_avaliacoes = json.load(arquivo)
     df = pd.DataFrame(historico_avaliacoes)
    
-df = pd.json_normalize(arquivo)
+df = pd.json_normalize(historico_avaliacoes)
 
 df.rename(columns={
     'metricas.eficiencia': 'Eficiencia',
